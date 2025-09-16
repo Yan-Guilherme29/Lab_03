@@ -15,12 +15,31 @@ public class Aluno {
     }
 
     public void imprimirInformacoes() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Notas: ");
+        for(int i = 0; i < this.notas.length; i++) {
+            System.out.println(this.notas[i]);
+        }
 
     }
 
-    public void calcularMedia() {
-
+    public double calcularMedia() {
+        double soma = 0;
+        for(int i = 0; i < this.notas.length; i++) {
+            soma += this.notas[i];
+        }
+        return soma / this.notas.length;
     }
+
+    public boolean verificarNotaAprovacao(double valor) {
+        for(int i = 0; i < this.notas.length; i++) {
+            if(this.notas[i] < valor) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
 }
