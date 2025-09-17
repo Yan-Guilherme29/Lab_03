@@ -5,7 +5,7 @@ public class Aluno {
     private double[] notas;
 
     public Aluno() {
-        this.nome = " ";
+        this.nome = "Desconhecido ";
         this.notas = new double[4];
     }
 
@@ -16,9 +16,9 @@ public class Aluno {
 
     public void imprimirInformacoes() {
         System.out.println("Nome: " + this.nome);
-        System.out.println("Notas: ");
+        System.out.print("Notas: ");
         for(int i = 0; i < this.notas.length; i++) {
-            System.out.println(this.notas[i]);
+            System.out.print(this.notas[i] + " | ");
         }
 
     }
@@ -40,6 +40,19 @@ public class Aluno {
         return true;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
 }
